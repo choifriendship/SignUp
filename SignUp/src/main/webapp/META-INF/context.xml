@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+
+	<!-- 
+	Resource를 등록하여 웹에서 JNDI로 호출할 이름과 정보를 설정
+	mariadb: org.mariadb.jdbc.Driver // jdbc:mariadb
+	 -->
+  <Resource
+  name="jdbc/mariaDB"
+  auth="Container"
+  type="javax.sql.DataSource"
+  factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+  driverClassName="org.mariadb.jdbc.Driver"
+  url="jdbc:mysql://localhost:3306/mission"
+  username="java"
+  password="java"
+  maxActive="100"
+  maxIdle="30"
+  maxWait="10000"
+  removeAbandoned="true"
+  removeAbandonedTimeout="60"/>
+
+</Context>
